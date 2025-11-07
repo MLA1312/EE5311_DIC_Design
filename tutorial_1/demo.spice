@@ -1,0 +1,7 @@
+.title demo
+V1 in GND dc 0 PULSE (0 5 1u 1u 1 1)
+R1 in out 10k
+C1 out GND 1u
+.tran 10u 50m
+.end
+

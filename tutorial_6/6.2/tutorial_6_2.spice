@@ -1,0 +1,38 @@
+** sch_path: /home/global/EE23B038/tutorial_6/6.2/tutorial_6_2.sch
+**.subckt tutorial_6_2
+x1 VDD Vout GND ring_osc
+Vdd1 VDD GND {VDDparam}
+**** begin user architecture code
+.lib /cad/share/pdk/sky130B/libs.tech/combined/sky130.lib.spice tt
+
+
+.include ring_osc_extracted.spice
+.ic v(Vout) = 0
+.param width_p = 0.84
+.param VDDparam = 1.8
+.control
+let index = 0
+let Nsim = 9
+let pv = vector(Nsim)
+let fv = vector(Nsim)
+let vals = vector(Nsim)
+while index < Nsim
+   let vddv = 1.0 + (index * 0.1)
+   alterparam VDDparam = $&vddv
+   reset
+   tran 1p 10n
+   meas tran period trig v(Vout) val=0.9 rise=1 targ v(Vout) val=0.9 rise=2
+   let pv[index] = $&period
+   let fv[index] = 1 / $&period
+   let vals[index] = $&vddv
+   let index = index + 1
+end
+plot pv vs vals
+plot fv vs vals
+.endc
+
+**** end user architecture code
+**.ends
+.GLOBAL GND
+.GLOBAL VDD
+.end

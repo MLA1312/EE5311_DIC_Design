@@ -1,0 +1,24 @@
+
+55. Printing statistics.
+
+=== ksa ===
+
+   Number of wires:                267
+   Number of wire bits:            312
+   Number of public wires:          56
+   Number of public wire bits:     101
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                278
+     $_ANDNOT_                      37
+     $_AND_                          3
+     $_NAND_                        17
+     $_NOR_                         32
+     $_NOT_                          1
+     $_ORNOT_                        7
+     $_OR_                          34
+     $_XNOR_                        19
+     $_XOR_                         78
+     sky130_fd_sc_hd__dfxtp_2       50
+

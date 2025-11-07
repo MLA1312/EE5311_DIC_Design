@@ -1,0 +1,69 @@
+** sch_path: /home/EE23B038/ee5311/tutorial_4/tutorial_4_1bc.sch
+**.subckt tutorial_4_1bc
+x1 Vin net1 Vout inv_amm
+x2 net2 Vout inv
+Vin1 Vin GND PULSE(0 {VDDval} 10ps 5ps 5ps 300ps 600ps)
+Vmeas net1 GND 0
+Vdd1 VDD GND {VDDval}
+**** begin user architecture code
+.lib /cad/share/pdk/sky130B/libs.tech/combined/sky130.lib.spice tt
+
+
+.param VDDVal = 1.8
+.param width_p = 0.84
+.control
+let Nsim = 9
+let delayvec = vector(Nsim)
+let vddvec = vector(Nsim)
+let edpvec = vector(Nsim)
+let index = 0
+while index < Nsim
+   let vddv = 1.0 + (index * 0.1)
+   let vby2 = vddv / 2
+   alterparam VDDval = $&vddv
+   reset
+   tran 1p 600p
+   meas tran thl trig v(Vin) val=$&vby2 rise=1 targ v(Vout) val=$&vby2 fall=1
+   meas tran tlh trig v(Vin) val=$&vby2 fall=1 targ v(Vout) val=$&vby2 rise=1
+   meas tran iinteg integ i(vmeas)
+   let delayvec[index] = ($&thl + $&tlh) / 2
+   let vddvec[index] = vddv
+   let edpvec[index] = $&iinteg * vddv * delayvec[index]
+   let index = index + 1
+end
+plot delayvec vs vddvec
+plot edpvec vs vddvec
+.endc
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  /home/EE23B038/ee5311/tutorial_4/inv_amm.sym # of pins=3
+** sym_path: /home/EE23B038/ee5311/tutorial_4/inv_amm.sym
+** sch_path: /home/EE23B038/ee5311/tutorial_4/inv_amm.sch
+.subckt inv_amm in lgnd out
+*.ipin in
+*.opin out
+*.iopin lgnd
+XM1 out in lgnd GND sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM2 out in VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W={width_p} nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+
+* expanding   symbol:  /home/EE23B038/ee5311/tutorial_4/inv.sym # of pins=2
+** sym_path: /home/EE23B038/ee5311/tutorial_4/inv.sym
+** sch_path: /home/EE23B038/ee5311/tutorial_4/inv.sch
+.subckt inv out in
+*.ipin in
+*.opin out
+XM1 out in GND GND sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM2 out in VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W={width_p} nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+.GLOBAL GND
+.GLOBAL VDD
+.end

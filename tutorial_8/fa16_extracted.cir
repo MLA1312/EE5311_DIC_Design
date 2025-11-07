@@ -1,0 +1,272 @@
+* Extracted by KLayout with SKY130 LVS runset on : 26/10/2025 15:46
+
+* cell fa16
+* pin DVDD
+* pin Cin
+* pin DGND
+* pin A3
+* pin Y
+* pin B3
+* pin A2
+* pin B2
+* pin A1
+* pin B1
+* pin A0
+* pin B0
+* pin GND
+.SUBCKT fa16 DVDD Cin DGND A3 Y B3 A2 B2 A1 B1 A0 B0 GND
+* cell instance $1 r180 *1 15.37,-6.585
+X$1 DGND Y \$18 Cin \$11 DVDD DVDD GND mux2
+* cell instance $2 r180 *1 10.85,-6.585
+X$2 \$13 \$18 DVDD DGND DVDD GND inv
+* cell instance $3 r180 *1 4.19,-6.585
+X$3 \$12 \$12 DVDD DGND DVDD GND inv
+* cell instance $4 r180 *1 2.43,-6.585
+X$4 DGND B2 A2 DVDD \$3 DVDD GND xor2
+* cell instance $6 r180 *1 9.09,-6.585
+X$6 DGND B3 A3 DVDD \$2 DVDD GND xor2
+* cell instance $7 r180 *1 2.43,-0.385
+X$7 DGND B0 A0 DVDD \$44 DVDD GND xor2
+* cell instance $8 r180 *1 4.19,-0.385
+X$8 \$41 \$41 DVDD DGND DVDD GND inv
+* cell instance $9 r0 *1 -0.79,-6.205
+X$9 DGND \$20 \$12 A2 B2 DVDD DVDD GND fa
+* cell instance $11 r180 *1 9.09,-0.385
+X$11 DGND B1 A1 DVDD \$43 DVDD GND xor2
+* cell instance $12 r180 *1 10.85,-0.385
+X$12 \$54 \$20 DVDD DGND DVDD GND inv
+* cell instance $13 r0 *1 6.49,-6.205
+X$13 DGND \$12 \$13 A3 B3 DVDD DVDD GND fa
+* cell instance $14 r180 *1 13.53,-0.385
+X$14 \$3 DVDD \$44 \$11 \$43 \$2 DGND DVDD GND nand4
+* cell instance $18 r0 *1 -0.79,-0.005
+X$18 DGND Cin \$41 A0 B0 DVDD DVDD GND fa
+* cell instance $20 r0 *1 6.49,-0.005
+X$20 DGND \$41 \$54 A1 B1 DVDD DVDD GND fa
+.ENDS fa16
+
+* cell mux2
+* pin DGND
+* pin X
+* pin A1
+* pin A0
+* pin S
+* pin DVDD
+* pin 
+* pin GND
+.SUBCKT mux2 DGND X A1 A0 S DVDD \$13 GND
+* device instance $1 r0 *1 1.015,2.08 sky130_fd_pr__pfet_01v8
+XM$1 DVDD S \$11 \$13 sky130_fd_pr__pfet_01v8 L=150000 W=420000 AS=158350000000
++ AD=76650000000 PS=1395000 PD=785000
+* device instance $2 r0 *1 1.53,2.08 sky130_fd_pr__pfet_01v8
+XM$2 \$11 A0 \$4 \$13 sky130_fd_pr__pfet_01v8 L=150000 W=420000 AS=76650000000
++ AD=193200000000 PS=785000 PD=1340000
+* device instance $3 r0 *1 2.6,2.08 sky130_fd_pr__pfet_01v8
+XM$3 \$4 A1 \$12 \$13 sky130_fd_pr__pfet_01v8 L=150000 W=420000 AS=193200000000
++ AD=44100000000 PS=1340000 PD=630000
+* device instance $4 r0 *1 2.96,2.08 sky130_fd_pr__pfet_01v8
+XM$4 \$12 \$6 DVDD \$13 sky130_fd_pr__pfet_01v8 L=150000 W=420000
++ AS=44100000000 AD=69300000000 PS=630000 PD=750000
+* device instance $5 r0 *1 3.44,2.08 sky130_fd_pr__pfet_01v8
+XM$5 DVDD S \$6 \$13 sky130_fd_pr__pfet_01v8 L=150000 W=420000 AS=69300000000
++ AD=117600000000 PS=750000 PD=1400000
+* device instance $6 r0 *1 0.47,1.985 sky130_fd_pr__pfet_01v8
+XM$6 X \$4 DVDD \$13 sky130_fd_pr__pfet_01v8 L=150000 W=1000000 AS=260000000000
++ AD=158350000000 PS=2520000 PD=1395000
+* device instance $7 r0 *1 1.015,0.445 sky130_fd_pr__nfet_01v8
+XM$7 DGND S \$7 GND sky130_fd_pr__nfet_01v8 L=150000 W=420000 AS=112850000000
++ AD=69300000000 PS=1045000 PD=750000
+* device instance $8 r0 *1 1.495,0.445 sky130_fd_pr__nfet_01v8
+XM$8 \$7 A1 \$4 GND sky130_fd_pr__nfet_01v8 L=150000 W=420000 AS=69300000000
++ AD=99750000000 PS=750000 PD=895000
+* device instance $9 r0 *1 2.12,0.445 sky130_fd_pr__nfet_01v8
+XM$9 \$4 A0 \$8 GND sky130_fd_pr__nfet_01v8 L=150000 W=420000 AS=99750000000
++ AD=69300000000 PS=895000 PD=750000
+* device instance $10 r0 *1 2.6,0.445 sky130_fd_pr__nfet_01v8
+XM$10 \$8 \$6 DGND GND sky130_fd_pr__nfet_01v8 L=150000 W=420000 AS=69300000000
++ AD=144900000000 PS=750000 PD=1110000
+* device instance $11 r0 *1 3.44,0.445 sky130_fd_pr__nfet_01v8
+XM$11 DGND S \$6 GND sky130_fd_pr__nfet_01v8 L=150000 W=420000 AS=144900000000
++ AD=109200000000 PS=1110000 PD=1360000
+* device instance $12 r0 *1 0.47,0.56 sky130_fd_pr__nfet_01v8
+XM$12 X \$4 DGND GND sky130_fd_pr__nfet_01v8 L=150000 W=650000 AS=169000000000
++ AD=112850000000 PS=1820000 PD=1045000
+.ENDS mux2
+
+* cell nand4
+* pin D
+* pin DVDD
+* pin A
+* pin Y
+* pin B
+* pin C
+* pin DGND
+* pin 
+* pin GND
+.SUBCKT nand4 D DVDD A Y B C DGND \$8 GND
+* device instance $1 r0 *1 0.47,1.985 sky130_fd_pr__pfet_01v8
+XM$1 DVDD D Y \$8 sky130_fd_pr__pfet_01v8 L=150000 W=1000000 AS=260000000000
++ AD=135000000000 PS=2520000 PD=1270000
+* device instance $2 r0 *1 0.89,1.985 sky130_fd_pr__pfet_01v8
+XM$2 Y C DVDD \$8 sky130_fd_pr__pfet_01v8 L=150000 W=1000000 AS=135000000000
++ AD=135000000000 PS=1270000 PD=1270000
+* device instance $3 r0 *1 1.31,1.985 sky130_fd_pr__pfet_01v8
+XM$3 DVDD B Y \$8 sky130_fd_pr__pfet_01v8 L=150000 W=1000000 AS=135000000000
++ AD=165000000000 PS=1270000 PD=1330000
+* device instance $4 r0 *1 1.79,1.985 sky130_fd_pr__pfet_01v8
+XM$4 Y A DVDD \$8 sky130_fd_pr__pfet_01v8 L=150000 W=1000000 AS=165000000000
++ AD=300000000000 PS=1330000 PD=2600000
+* device instance $5 r0 *1 0.47,0.56 sky130_fd_pr__nfet_01v8
+XM$5 DGND D \$11 GND sky130_fd_pr__nfet_01v8 L=150000 W=650000 AS=169000000000
++ AD=87750000000 PS=1820000 PD=920000
+* device instance $6 r0 *1 0.89,0.56 sky130_fd_pr__nfet_01v8
+XM$6 \$11 C \$10 GND sky130_fd_pr__nfet_01v8 L=150000 W=650000 AS=87750000000
++ AD=87750000000 PS=920000 PD=920000
+* device instance $7 r0 *1 1.31,0.56 sky130_fd_pr__nfet_01v8
+XM$7 \$10 B \$9 GND sky130_fd_pr__nfet_01v8 L=150000 W=650000 AS=87750000000
++ AD=107250000000 PS=920000 PD=980000
+* device instance $8 r0 *1 1.79,0.56 sky130_fd_pr__nfet_01v8
+XM$8 \$9 A Y GND sky130_fd_pr__nfet_01v8 L=150000 W=650000 AS=107250000000
++ AD=195000000000 PS=980000 PD=1900000
+.ENDS nand4
+
+* cell inv
+* pin A
+* pin Y
+* pin DVDD
+* pin DGND
+* pin 
+* pin GND
+.SUBCKT inv A Y DVDD DGND \$5 GND
+* device instance $1 r0 *1 0.675,1.985 sky130_fd_pr__pfet_01v8
+XM$1 DVDD A Y \$5 sky130_fd_pr__pfet_01v8 L=150000 W=1000000 AS=260000000000
++ AD=260000000000 PS=2520000 PD=2520000
+* device instance $2 r0 *1 0.675,0.56 sky130_fd_pr__nfet_01v8
+XM$2 DGND A Y GND sky130_fd_pr__nfet_01v8 L=150000 W=650000 AS=169000000000
++ AD=169000000000 PS=1820000 PD=1820000
+.ENDS inv
+
+* cell xor2
+* pin DGND
+* pin B
+* pin A
+* pin DVDD
+* pin Y
+* pin 
+* pin GND
+.SUBCKT xor2 DGND B A DVDD Y \$8 GND
+* device instance $1 r0 *1 2.71,1.985 sky130_fd_pr__pfet_01v8
+XM$1 \$5 \$1 Y \$8 sky130_fd_pr__pfet_01v8 L=150000 W=1000000 AS=260000000000
++ AD=300000000000 PS=2520000 PD=2600000
+* device instance $2 r0 *1 0.51,1.985 sky130_fd_pr__pfet_01v8
+XM$2 \$1 B \$10 \$8 sky130_fd_pr__pfet_01v8 L=150000 W=1000000 AS=260000000000
++ AD=135000000000 PS=2520000 PD=1270000
+* device instance $3 r0 *1 0.93,1.985 sky130_fd_pr__pfet_01v8
+XM$3 \$10 A DVDD \$8 sky130_fd_pr__pfet_01v8 L=150000 W=1000000 AS=135000000000
++ AD=135000000000 PS=1270000 PD=1270000
+* device instance $4 r0 *1 1.35,1.985 sky130_fd_pr__pfet_01v8
+XM$4 DVDD A \$5 \$8 sky130_fd_pr__pfet_01v8 L=150000 W=1000000 AS=135000000000
++ AD=135000000000 PS=1270000 PD=1270000
+* device instance $5 r0 *1 1.77,1.985 sky130_fd_pr__pfet_01v8
+XM$5 \$5 B DVDD \$8 sky130_fd_pr__pfet_01v8 L=150000 W=1000000 AS=135000000000
++ AD=260000000000 PS=1270000 PD=2520000
+* device instance $6 r0 *1 0.51,0.56 sky130_fd_pr__nfet_01v8
+XM$6 DGND B \$1 GND sky130_fd_pr__nfet_01v8 L=150000 W=650000 AS=169000000000
++ AD=87750000000 PS=1820000 PD=920000
+* device instance $7 r0 *1 0.93,0.56 sky130_fd_pr__nfet_01v8
+XM$7 \$1 A DGND GND sky130_fd_pr__nfet_01v8 L=150000 W=650000 AS=87750000000
++ AD=87750000000 PS=920000 PD=920000
+* device instance $8 r0 *1 1.35,0.56 sky130_fd_pr__nfet_01v8
+XM$8 DGND A \$9 GND sky130_fd_pr__nfet_01v8 L=150000 W=650000 AS=87750000000
++ AD=87750000000 PS=920000 PD=920000
+* device instance $9 r0 *1 1.77,0.56 sky130_fd_pr__nfet_01v8
+XM$9 \$9 B Y GND sky130_fd_pr__nfet_01v8 L=150000 W=650000 AS=87750000000
++ AD=250250000000 PS=920000 PD=1420000
+* device instance $10 r0 *1 2.69,0.56 sky130_fd_pr__nfet_01v8
+XM$10 Y \$1 DGND GND sky130_fd_pr__nfet_01v8 L=150000 W=650000 AS=250250000000
++ AD=208000000000 PS=1420000 PD=1940000
+.ENDS xor2
+
+* cell fa
+* pin DGND
+* pin CIN
+* pin COUTB
+* pin A
+* pin B
+* pin DVDD
+* pin 
+* pin GND
+.SUBCKT fa DGND CIN COUTB A B DVDD \$18 GND
+* device instance $1 r0 *1 3.42,2.275 sky130_fd_pr__pfet_01v8
+XM$1 DVDD B \$13 \$18 sky130_fd_pr__pfet_01v8 L=150000 W=420000 AS=109200000000
++ AD=56700000000 PS=1360000 PD=690000
+* device instance $2 r0 *1 3.84,2.275 sky130_fd_pr__pfet_01v8
+XM$2 \$13 CIN DVDD \$18 sky130_fd_pr__pfet_01v8 L=150000 W=420000
++ AS=56700000000 AD=56700000000 PS=690000 PD=690000
+* device instance $3 r0 *1 4.26,2.275 sky130_fd_pr__pfet_01v8
+XM$3 DVDD A \$13 \$18 sky130_fd_pr__pfet_01v8 L=150000 W=420000 AS=56700000000
++ AD=61950000000 PS=690000 PD=715000
+* device instance $4 r0 *1 4.705,2.275 sky130_fd_pr__pfet_01v8
+XM$4 \$13 COUTB SUMB \$18 sky130_fd_pr__pfet_01v8 L=150000 W=420000
++ AS=61950000000 AD=69300000000 PS=715000 PD=750000
+* device instance $5 r0 *1 5.185,2.275 sky130_fd_pr__pfet_01v8
+XM$5 SUMB CIN \$16 \$18 sky130_fd_pr__pfet_01v8 L=150000 W=420000
++ AS=69300000000 AD=44100000000 PS=750000 PD=630000
+* device instance $6 r0 *1 5.545,2.275 sky130_fd_pr__pfet_01v8
+XM$6 \$16 B \$17 \$18 sky130_fd_pr__pfet_01v8 L=150000 W=420000 AS=44100000000
++ AD=69300000000 PS=630000 PD=750000
+* device instance $7 r0 *1 6.025,2.275 sky130_fd_pr__pfet_01v8
+XM$7 \$17 A DVDD \$18 sky130_fd_pr__pfet_01v8 L=150000 W=420000 AS=69300000000
++ AD=157500000000 PS=750000 PD=1590000
+* device instance $8 r0 *1 0.77,2.275 sky130_fd_pr__pfet_01v8
+XM$8 DVDD A \$15 \$18 sky130_fd_pr__pfet_01v8 L=150000 W=420000 AS=157500000000
++ AD=63000000000 PS=1590000 PD=720000
+* device instance $9 r0 *1 1.22,2.275 sky130_fd_pr__pfet_01v8
+XM$9 \$15 B COUTB \$18 sky130_fd_pr__pfet_01v8 L=150000 W=420000 AS=63000000000
++ AD=56700000000 PS=720000 PD=690000
+* device instance $10 r0 *1 1.64,2.275 sky130_fd_pr__pfet_01v8
+XM$10 COUTB CIN \$12 \$18 sky130_fd_pr__pfet_01v8 L=150000 W=420000
++ AS=56700000000 AD=56700000000 PS=690000 PD=690000
+* device instance $11 r0 *1 2.06,2.275 sky130_fd_pr__pfet_01v8
+XM$11 \$12 A DVDD \$18 sky130_fd_pr__pfet_01v8 L=150000 W=420000 AS=56700000000
++ AD=56700000000 PS=690000 PD=690000
+* device instance $12 r0 *1 2.48,2.275 sky130_fd_pr__pfet_01v8
+XM$12 DVDD B \$12 \$18 sky130_fd_pr__pfet_01v8 L=150000 W=420000 AS=56700000000
++ AD=109200000000 PS=690000 PD=1360000
+* device instance $13 r0 *1 3.42,0.445 sky130_fd_pr__nfet_01v8
+XM$13 DGND B \$3 GND sky130_fd_pr__nfet_01v8 L=150000 W=420000 AS=109200000000
++ AD=56700000000 PS=1360000 PD=690000
+* device instance $14 r0 *1 3.84,0.445 sky130_fd_pr__nfet_01v8
+XM$14 \$3 CIN DGND GND sky130_fd_pr__nfet_01v8 L=150000 W=420000 AS=56700000000
++ AD=56700000000 PS=690000 PD=690000
+* device instance $15 r0 *1 4.26,0.445 sky130_fd_pr__nfet_01v8
+XM$15 DGND A \$3 GND sky130_fd_pr__nfet_01v8 L=150000 W=420000 AS=56700000000
++ AD=61950000000 PS=690000 PD=715000
+* device instance $16 r0 *1 4.705,0.445 sky130_fd_pr__nfet_01v8
+XM$16 \$3 COUTB SUMB GND sky130_fd_pr__nfet_01v8 L=150000 W=420000
++ AS=61950000000 AD=69300000000 PS=715000 PD=750000
+* device instance $17 r0 *1 5.185,0.445 sky130_fd_pr__nfet_01v8
+XM$17 SUMB CIN \$8 GND sky130_fd_pr__nfet_01v8 L=150000 W=420000 AS=69300000000
++ AD=44100000000 PS=750000 PD=630000
+* device instance $18 r0 *1 5.545,0.445 sky130_fd_pr__nfet_01v8
+XM$18 \$8 B \$9 GND sky130_fd_pr__nfet_01v8 L=150000 W=420000 AS=44100000000
++ AD=69300000000 PS=630000 PD=750000
+* device instance $19 r0 *1 6.025,0.445 sky130_fd_pr__nfet_01v8
+XM$19 \$9 A DGND GND sky130_fd_pr__nfet_01v8 L=150000 W=420000 AS=69300000000
++ AD=117600000000 PS=750000 PD=1400000
+* device instance $20 r0 *1 0.77,0.445 sky130_fd_pr__nfet_01v8
+XM$20 DGND A \$7 GND sky130_fd_pr__nfet_01v8 L=150000 W=420000 AS=159600000000
++ AD=63000000000 PS=1600000 PD=720000
+* device instance $21 r0 *1 1.22,0.445 sky130_fd_pr__nfet_01v8
+XM$21 \$7 B COUTB GND sky130_fd_pr__nfet_01v8 L=150000 W=420000 AS=63000000000
++ AD=56700000000 PS=720000 PD=690000
+* device instance $22 r0 *1 1.64,0.445 sky130_fd_pr__nfet_01v8
+XM$22 COUTB CIN \$2 GND sky130_fd_pr__nfet_01v8 L=150000 W=420000
++ AS=56700000000 AD=56700000000 PS=690000 PD=690000
+* device instance $23 r0 *1 2.06,0.445 sky130_fd_pr__nfet_01v8
+XM$23 \$2 A DGND GND sky130_fd_pr__nfet_01v8 L=150000 W=420000 AS=56700000000
++ AD=56700000000 PS=690000 PD=690000
+* device instance $24 r0 *1 2.48,0.445 sky130_fd_pr__nfet_01v8
+XM$24 DGND B \$2 GND sky130_fd_pr__nfet_01v8 L=150000 W=420000 AS=56700000000
++ AD=109200000000 PS=690000 PD=1360000
+.ENDS fa

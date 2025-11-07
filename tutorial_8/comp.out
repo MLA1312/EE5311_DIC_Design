@@ -1,0 +1,142 @@
+
+Circuit 1 cell sky130_fd_pr__nfet_01v8 and Circuit 2 cell sky130_fd_pr__nfet_01v8 are black boxes.
+Warning: Equate pins:  cell sky130_fd_pr__nfet_01v8 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell sky130_fd_pr__nfet_01v8 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_pr__nfet_01v8         |Circuit 2: sky130_fd_pr__nfet_01v8         
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_pr__nfet_01v8 and sky130_fd_pr__nfet_01v8 are equivalent.
+
+Circuit 1 cell sky130_fd_pr__pfet_01v8 and Circuit 2 cell sky130_fd_pr__pfet_01v8 are black boxes.
+Warning: Equate pins:  cell sky130_fd_pr__pfet_01v8 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell sky130_fd_pr__pfet_01v8 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_pr__pfet_01v8         |Circuit 2: sky130_fd_pr__pfet_01v8         
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_pr__pfet_01v8 and sky130_fd_pr__pfet_01v8 are equivalent.
+Flattening unmatched subcell fa in circuit fa16 (0)(16 instances)
+Flattening unmatched subcell xor2 in circuit fa16 (0)(16 instances)
+Flattening unmatched subcell inv in circuit fa16 (0)(17 instances)
+Flattening unmatched subcell nand4 in circuit fa16 (0)(4 instances)
+Flattening unmatched subcell mux2 in circuit fa16 (0)(4 instances)
+
+Subcircuit summary:
+Circuit 1: fa16                            |Circuit 2: fa16                            
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__nfet_01v8 (329)              |sky130_fd_pr__nfet_01v8 (329)              
+sky130_fd_pr__pfet_01v8 (329)              |sky130_fd_pr__pfet_01v8 (329)              
+Number of devices: 658                     |Number of devices: 658                     
+Number of nets: 368                        |Number of nets: 368                        
+---------------------------------------------------------------------------------------
+Netlists match uniquely with property errors.
+mux2:14/sky130_fd_pr__pfet_01v8:M5 vs. sky130_fd_pr__pfet_01v8:586:
+ W circuit1: 1   circuit2: 0.42   (delta=81.7%, cutoff=1%)
+mux2:56/sky130_fd_pr__pfet_01v8:M5 vs. sky130_fd_pr__pfet_01v8:29:
+ W circuit1: 1   circuit2: 0.42   (delta=81.7%, cutoff=1%)
+mux2:42/sky130_fd_pr__pfet_01v8:M5 vs. sky130_fd_pr__pfet_01v8:70:
+ W circuit1: 1   circuit2: 0.42   (delta=81.7%, cutoff=1%)
+mux2:28/sky130_fd_pr__pfet_01v8:M5 vs. sky130_fd_pr__pfet_01v8:621:
+ W circuit1: 1   circuit2: 0.42   (delta=81.7%, cutoff=1%)
+mux2:14/sky130_fd_pr__nfet_01v8:M7 vs. sky130_fd_pr__nfet_01v8:325:
+ W circuit1: 0.65   circuit2: 0.42   (delta=43%, cutoff=1%)
+mux2:14/sky130_fd_pr__nfet_01v8:M12 vs. sky130_fd_pr__nfet_01v8:351:
+ W circuit1: 0.65   circuit2: 0.42   (delta=43%, cutoff=1%)
+mux2:28/sky130_fd_pr__nfet_01v8:M12 vs. sky130_fd_pr__nfet_01v8:350:
+ W circuit1: 0.65   circuit2: 0.42   (delta=43%, cutoff=1%)
+mux2:42/sky130_fd_pr__nfet_01v8:M12 vs. sky130_fd_pr__nfet_01v8:530:
+ W circuit1: 0.65   circuit2: 0.42   (delta=43%, cutoff=1%)
+mux2:56/sky130_fd_pr__nfet_01v8:M12 vs. sky130_fd_pr__nfet_01v8:531:
+ W circuit1: 0.65   circuit2: 0.42   (delta=43%, cutoff=1%)
+mux2:56/sky130_fd_pr__nfet_01v8:M7 vs. sky130_fd_pr__nfet_01v8:549:
+ W circuit1: 0.65   circuit2: 0.42   (delta=43%, cutoff=1%)
+mux2:28/sky130_fd_pr__nfet_01v8:M7 vs. sky130_fd_pr__nfet_01v8:326:
+ W circuit1: 0.65   circuit2: 0.42   (delta=43%, cutoff=1%)
+mux2:42/sky130_fd_pr__nfet_01v8:M7 vs. sky130_fd_pr__nfet_01v8:546:
+ W circuit1: 0.65   circuit2: 0.42   (delta=43%, cutoff=1%)
+mux2:56/sky130_fd_pr__nfet_01v8:M11 vs. sky130_fd_pr__nfet_01v8:601:
+ W circuit1: 0.65   circuit2: 0.42   (delta=43%, cutoff=1%)
+mux2:42/sky130_fd_pr__nfet_01v8:M11 vs. sky130_fd_pr__nfet_01v8:600:
+ W circuit1: 0.65   circuit2: 0.42   (delta=43%, cutoff=1%)
+mux2:28/sky130_fd_pr__nfet_01v8:M11 vs. sky130_fd_pr__nfet_01v8:95:
+ W circuit1: 0.65   circuit2: 0.42   (delta=43%, cutoff=1%)
+mux2:14/sky130_fd_pr__nfet_01v8:M11 vs. sky130_fd_pr__nfet_01v8:98:
+ W circuit1: 0.65   circuit2: 0.42   (delta=43%, cutoff=1%)
+mux2:42/sky130_fd_pr__nfet_01v8:M8 vs. sky130_fd_pr__nfet_01v8:623:
+ W circuit1: 0.65   circuit2: 0.42   (delta=43%, cutoff=1%)
+mux2:28/sky130_fd_pr__nfet_01v8:M8 vs. sky130_fd_pr__nfet_01v8:256:
+ W circuit1: 0.65   circuit2: 0.42   (delta=43%, cutoff=1%)
+mux2:56/sky130_fd_pr__nfet_01v8:M8 vs. sky130_fd_pr__nfet_01v8:624:
+ W circuit1: 0.65   circuit2: 0.42   (delta=43%, cutoff=1%)
+mux2:14/sky130_fd_pr__nfet_01v8:M8 vs. sky130_fd_pr__nfet_01v8:255:
+ W circuit1: 0.65   circuit2: 0.42   (delta=43%, cutoff=1%)
+mux2:14/sky130_fd_pr__nfet_01v8:M6 vs. sky130_fd_pr__nfet_01v8:630:
+ W circuit1: 0.65   circuit2: 0.42   (delta=43%, cutoff=1%)
+mux2:56/sky130_fd_pr__nfet_01v8:M6 vs. sky130_fd_pr__nfet_01v8:74:
+ W circuit1: 0.65   circuit2: 0.42   (delta=43%, cutoff=1%)
+mux2:42/sky130_fd_pr__nfet_01v8:M6 vs. sky130_fd_pr__nfet_01v8:73:
+ W circuit1: 0.65   circuit2: 0.42   (delta=43%, cutoff=1%)
+mux2:28/sky130_fd_pr__nfet_01v8:M6 vs. sky130_fd_pr__nfet_01v8:631:
+ W circuit1: 0.65   circuit2: 0.42   (delta=43%, cutoff=1%)
+
+Subcircuit pins:
+Circuit 1: fa16                            |Circuit 2: fa16                            
+-------------------------------------------|-------------------------------------------
+S15                                        |S15                                        
+Cin                                        |Cin                                        
+A15                                        |A15                                        
+A12                                        |A12                                        
+A8                                         |A8                                         
+A4                                         |A4                                         
+A14                                        |A14                                        
+A2                                         |A2                                         
+A10                                        |A10                                        
+A6                                         |A6                                         
+A11                                        |A11                                        
+A7                                         |A7                                         
+A3                                         |A3                                         
+A0                                         |A0                                         
+A13                                        |A13                                        
+A9                                         |A9                                         
+A5                                         |A5                                         
+A1                                         |A1                                         
+B15                                        |B15                                        
+B12                                        |B12                                        
+B8                                         |B8                                         
+B4                                         |B4                                         
+B11                                        |B11                                        
+B7                                         |B7                                         
+B3                                         |B3                                         
+B14                                        |B14                                        
+B10                                        |B10                                        
+B6                                         |B6                                         
+B2                                         |B2                                         
+B13                                        |B13                                        
+B9                                         |B9                                         
+B5                                         |B5                                         
+B1                                         |B1                                         
+B0                                         |B0                                         
+DGND                                       |DGND                                       
+DVDD                                       |DVDD                                       
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes fa16 and fa16 are equivalent.
+
+Final result: Circuits match uniquely.
+Property errors were found.
+
+The following cells had property errors:
+ fa16

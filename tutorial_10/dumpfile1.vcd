@@ -1,0 +1,63 @@
+$date
+	Thu Oct 16 21:14:08 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module fa_test $end
+$var reg 1 ! A $end
+$upscope $end
+$scope module fa_test $end
+$var reg 1 " B $end
+$upscope $end
+$scope module fa_test $end
+$var reg 1 # Cin $end
+$upscope $end
+$scope module fa_test $end
+$var wire 1 $ S $end
+$upscope $end
+$scope module fa_test $end
+$var wire 1 % Cout $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0%
+0$
+0#
+0"
+0!
+$end
+#21
+1$
+1#
+#32
+1$
+1"
+0#
+#43
+1%
+0$
+1#
+#54
+0%
+1$
+1!
+0"
+0#
+#65
+1%
+0$
+1#
+#76
+1%
+0$
+1"
+0#
+#87
+1$
+1#
+#98

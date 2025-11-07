@@ -1,0 +1,13 @@
+** sch_path: /home/EE23B038/ee5311/tutorial_7/nors.sch
+.subckt nors DVDD Y A DGND
+*.PININFO A:I DVDD:B DGND:B Y:B
+XM1 Y A DGND DGND sky130_fd_pr__nfet_01v8 L=0.15 W=0.84 nf=2 m=1
+XM2 Y DGND DGND DGND sky130_fd_pr__nfet_01v8 L=0.15 W=0.84 nf=2 m=1
+XM3 Y A net1 DVDD sky130_fd_pr__pfet_01v8 L=0.15 W=3.36 nf=4 m=1
+XM4 net1 DGND DVDD DVDD sky130_fd_pr__pfet_01v8 L=0.15 W=3.36 nf=4 m=1
+XM5 net2 Y DGND DGND sky130_fd_pr__nfet_01v8 L=0.15 W=0.84 nf=2 m=1
+XM6 net2 DGND DGND DGND sky130_fd_pr__nfet_01v8 L=0.15 W=0.84 nf=2 m=1
+XM7 net2 Y net3 DVDD sky130_fd_pr__pfet_01v8 L=0.15 W=3.36 nf=4 m=1
+XM8 net3 DGND DVDD DVDD sky130_fd_pr__pfet_01v8 L=0.15 W=3.36 nf=4 m=1
+.ends
+.end

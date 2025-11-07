@@ -1,0 +1,96 @@
+** sch_path: /home/EE23B038/ee5311/tutorial_5/tutorial_5.sch
+**.subckt tutorial_5
+V3 D GND PULSE(0 1.8 {delay} 5p 5p 19.99n 40n)
+XM1 net2 ph net1 GND sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM2 net1 phinv net2 VDD sky130_fd_pr__pfet_01v8 L=0.15 W=0.42 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+x1 net3 net2 inv
+x2 net1 net3 inv
+XM3 net2 phinv net4 GND sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM4 net4 ph net2 VDD sky130_fd_pr__pfet_01v8 L=0.15 W=0.42 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+x3 net4 D inv
+XM5 net6 phinv net5 GND sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM6 net5 ph net6 VDD sky130_fd_pr__pfet_01v8 L=0.15 W=0.42 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+x4 net7 net6 inv
+x5 net5 net7 inv
+XM7 net6 ph net8 GND sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM8 net8 phinv net6 VDD sky130_fd_pr__pfet_01v8 L=0.15 W=0.42 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+x6 net8 net3 inv
+x7 Q net6 inv
+V1 ph GND PULSE(0 1.8 10n 5p 5p 9.99n 20n)
+V2 phinv GND PULSE(1.8 0 10n 5p 5p 9.99n 20n)
+Vdd1 VDD GND 1.8
+x8 net9 Q inv
+**** begin user architecture code
+.lib /cad/share/pdk/sky130B/libs.tech/combined/sky130.lib.spice tt
+
+
+.param width_p = 0.84
+.param delay = 9.80n
+.control
+let index = 1
+let N = 60
+set vcache = ( )
+while index le N
+   let newd = 9.80n + (index * 2p)
+   alterparam delay = $&newd
+   reset
+   tran 2p 11n 9n
+   set vcache = ( $vcache tran{$&index}.v(D) )
+   set vcache = ( $vcache tran{$&index}.v(Q) )
+   meas tran tdq trig v(D) val=0.9 rise=1 targ v(Q) val=0.9 rise=1
+   meas tran tdp trig v(D) val=0.9 rise=1 targ v(ph) val=0.9 rise=1
+   meas tran tpq trig v(ph) val=0.9 rise=1 targ v(Q) val=0.9 rise=1
+   echo $&tdq $&tdp $&tpq >> rise.txt
+   let index = index + 1
+end
+set vcache = ( $vcache v(ph) )
+set nolegend
+plot $vcache
+let index = 61
+let N = 120
+set fcache = ( )
+while index le N
+   let newd = 9.80n + ((index - 60) * 2p)
+   alterparam delay = $&newd
+   reset
+   tran 5p 31n 29n
+   set fcache = ( $fcache tran{$&index}.v(D) )
+   set fcache = ( $fcache tran{$&index}.v(Q) )
+   meas tran tdq trig v(D) val=0.9 fall=1 targ v(Q) val=0.9 fall=1
+   meas tran tdp trig v(D) val=0.9 fall=1 targ v(ph) val=0.9 rise=1
+   meas tran tpq trig v(ph) val=0.9 rise=1 targ v(Q) val=0.9 fall=1
+   echo $&tdq $&tdp $&tpq >> fall.txt
+   let index = index + 1
+end
+set fcache = ( $fcache v(ph) )
+set nolegend
+plot $fcache
+.endc
+
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  /home/EE23B038/ee5311/tutorial_5/inv.sym # of pins=2
+** sym_path: /home/EE23B038/ee5311/tutorial_5/inv.sym
+** sch_path: /home/EE23B038/ee5311/tutorial_5/inv.sch
+.subckt inv out in
+*.ipin in
+*.opin out
+XM1 out in GND GND sky130_fd_pr__nfet_01v8 L=0.15 W=0.42 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM2 out in VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W={width_p} nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+.GLOBAL GND
+.GLOBAL VDD
+.end

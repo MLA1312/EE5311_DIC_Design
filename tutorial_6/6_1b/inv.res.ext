@@ -1,0 +1,57 @@
+scale 1000 1 500000
+rnode "DVDD.t0" 0 0 542 571 0
+rnode "DVDD.t3" 0 0 47 571 0
+rnode "DVDD.t2" 0 0 62 571 0
+rnode "DVDD.n0" 0 0 302 581 0
+rnode "DVDD.n1" 0 0 302 692 0
+rnode "DVDD.t1" 0 0 527 571 0
+rnode "DVDD.n2" 0 0 497 697 0
+rnode "DVDD" 0 0 694 680 0
+resist "DVDD.n2" "DVDD.n1" 0.253906
+resist "DVDD" "DVDD.n2" 0.25651
+resist "DVDD.n1" "DVDD.n0" 238.903
+resist "DVDD.n2" "DVDD.t1" 397.849
+resist "DVDD.n1" "DVDD.t3" 398.22
+resist "DVDD.n0" "DVDD.t2" 703.704
+resist "DVDD.n0" "DVDD.t0" 703.704
+resist "DVDD" "DVDD.t0" 942.721
+rnode "in.t1" 0 0 62 571 0
+rnode "in.t0" 0 0 62 263 0
+rnode "in.n0" 0 0 23 391 0
+rnode "in" 0 0 13 383 0
+resist "in" "in.n0" 154.37
+resist "in.n0" "in.t0" 177.232
+resist "in.n0" "in.t1" 260.779
+rnode "DGND.t0" 0 0 542 263 0
+rnode "DGND.t3" 0 0 47 263 0
+rnode "DGND.t2" 0 0 62 263 0
+rnode "DGND.n0" 0 0 302 250 0
+rnode "DGND.n1" 0 0 302 142 0
+rnode "DGND.t1" 0 0 527 263 0
+rnode "DGND.n2" 0 0 497 151 0
+rnode "DGND" 0 0 634 142 0
+resist "DGND" "DGND.n2" 0.178385
+resist "DGND.n2" "DGND.n1" 0.253906
+resist "DGND.n2" "DGND.t1" 275.739
+resist "DGND.n1" "DGND.t3" 276.109
+resist "DGND.n1" "DGND.n0" 1216.38
+resist "DGND.n0" "DGND.t2" 3417.48
+resist "DGND.n0" "DGND.t0" 3417.48
+resist "DGND" "DGND.t0" 4634.04
+rnode "out.t0" 0 0 77 571 0
+rnode "out.t1" 0 0 77 263 0
+rnode "out.t3" 0 0 542 571 0
+rnode "out.t2" 0 0 542 263 0
+rnode "out.n0" 0 0 503 391 0
+rnode "out.n1" 0 0 107 418 0
+rnode "out" 0 0 103 380 0
+resist "out" "out.n1" 0.948148
+resist "out.n0" "out.t2" 177.232
+resist "out.n1" "out.n0" 245.867
+resist "out.n0" "out.t3" 260.779
+resist "out.n1" "out.t1" 265.881
+resist "out.n1" "out.t0" 402.296
+device msubckt sky130_fd_pr__pfet_01v8 47 487 48 488  "DVDD.t2" "in.t1" 60 0 "DVDD.t3" 168 10080,456 "out.t0" 168 10080,456
+device msubckt sky130_fd_pr__pfet_01v8 527 487 528 488  "DVDD.t0" "out.t3" 60 0 "DVDD.t1" 168 10080,456 "a_557_221#" 168 10080,456
+device msubckt sky130_fd_pr__nfet_01v8 47 221 48 222  "DGND.t2" "in.t0" 60 0 "DGND.t3" 84 5040,288 "out.t1" 84 5040,288
+device msubckt sky130_fd_pr__nfet_01v8 527 221 528 222  "DGND.t0" "out.t2" 60 0 "DGND.t1" 84 5040,288 "a_557_221#" 84 5040,288

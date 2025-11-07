@@ -1,0 +1,32 @@
+** sch_path: /home/EE23B038/ee5311/tutorial_2/tutorial_2_1c.sch
+**.subckt tutorial_2_1c
+XM1 net2 net1 GND GND sky130_fd_pr__nfet_01v8 L={length} W={width} nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+Vdd1 net2 GND 1.8
+Vin1 net1 GND 1.8
+**** begin user architecture code
+
+.param width = 0.42
+.param length = 0.15
+.dc Vdd1 0 1.8 0.01
+.control
+   let index = 1
+   set cache = ''
+   while index <= 10
+       let newW = index * 0.42
+       let newL = index * 0.15
+       alterparam width = $&newW
+       alterparam length = $&newL
+       reset
+       run
+       set cache = ( $cache dc{$&index}.i(Vdd1)*-1 )
+       let index = index + 1
+   end
+   plot $cache
+.endc
+
+.lib /cad/share/pdk/sky130B/libs.tech/combined/sky130.lib.spice tt
+**** end user architecture code
+**.ends
+.GLOBAL GND
+.end

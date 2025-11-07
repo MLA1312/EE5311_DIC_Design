@@ -1,0 +1,34 @@
+** sch_path: /home/EE23B038/ee5311/tutorial_2/tutorial_2_2a.sch
+**.subckt tutorial_2_2a
+XM1 net1 net1 VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=0.42 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+Vdd1 VDD GND 1.8
+Vin1 net1 GND 1.8
+**** begin user architecture code
+
+
+.control
+dc Vin1 1.8 0 -0.01
+let mu = 0.009
+let WbyL = 0.42/0.15
+let Cox = 0.00816
+let Vth = 0.7
+let vsat = 3e4
+let Vsg = 1.8 - "v-sweep"
+let Vsd = Vsg
+let lambap = 0.2
+let EcL = 2*vsat* 0.15e-6/mu
+let Vgt = max(Vsg - Vth, 0)
+let Vdsat = (Vgt)*EcL/(EcL + Vgt)
+let Vmin = min(Vsg, Vdsat)
+let idfit = 0.5*mu*Cox*WbyL*Ecl*(Vgt^2)*(1+lambap*Vsd)/(Vgt +  EcL)
+set filetype=ascii
+wrdata pmos_ids_vgs.txt I(Vin1) idfit
+plot I(Vin1) idfit
+.endc
+
+.lib /cad/share/pdk/sky130B/libs.tech/combined/sky130.lib.spice tt
+**** end user architecture code
+**.ends
+.GLOBAL GND
+.end

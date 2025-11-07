@@ -1,0 +1,1 @@
+lvs {/openlane/designs/ksa/runs/auto_pnr/results/signoff/ksa.spice ksa} {/openlane/designs/ksa/runs/auto_pnr/tmp/signoff/35-ksa.pnl.v ksa} /volare/sky130A/libs.tech/netgen/sky130A_setup.tcl /openlane/designs/ksa/runs/auto_pnr/logs/signoff/38-ksa.lef.lvs.log -json

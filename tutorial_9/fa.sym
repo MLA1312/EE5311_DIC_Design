@@ -1,0 +1,30 @@
+v {xschem version=3.4.6 file_version=1.2}
+G {}
+K {type=subcircuit
+format="@name @pinlist @symname"
+template="name=x1"
+}
+V {}
+S {}
+E {}
+L 4 10 -90 10 -70 {}
+L 4 0 40 0 60 {}
+L 4 -10 -90 -10 -70 {}
+L 4 -20 40 -20 60 {}
+L 4 -30 -90 -30 -70 {}
+L 4 -70 -70 -70 40 {}
+L 4 -70 40 50 40 {}
+L 4 50 -70 50 40 {}
+L 4 -70 -70 50 -70 {}
+B 5 7.5 -92.5 12.5 -87.5 {name=A verilog_type=logic dir=in}
+B 5 -2.5 57.5 2.5 62.5 {name=S dir=out}
+B 5 -12.5 -92.5 -7.5 -87.5 {name=B verilog_type=logic dir=in}
+B 5 -22.5 57.5 -17.5 62.5 {name=Cout dir=out}
+B 5 -32.5 -92.5 -27.5 -87.5 {name=Cin verilog_type=logic dir=in}
+T {@symname} -57 4 0 0 0.3 0.3 {}
+T {@name} -45 -12 0 0 0.2 0.2 {}
+T {A} 15 -96 2 0 0.2 0.2 {}
+T {S} -5 84 2 1 0.2 0.2 {}
+T {B} -5 -96 2 0 0.2 0.2 {}
+T {Cout} -45 84 2 1 0.2 0.2 {}
+T {Cin} -25 -96 2 0 0.2 0.2 {}

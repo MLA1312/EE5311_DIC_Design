@@ -1,0 +1,45 @@
+$date
+	Thu Oct 30 23:23:45 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module cba_test $end
+$var reg 16 ! A [15:0] $end
+$upscope $end
+$scope module cba_test $end
+$var reg 16 " B [15:0] $end
+$upscope $end
+$scope module cba_test $end
+$var reg 1 # Cin $end
+$upscope $end
+$scope module cba_test $end
+$var wire 16 $ S [15:0] $end
+$upscope $end
+$scope module cba_test $end
+$var wire 1 % Cout $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0%
+b0 $
+0#
+b0 "
+b0 !
+$end
+#10
+1%
+b110111000100110 $
+1#
+b1000010000011101 !
+b1110101000001000 "
+#21
+b1111000000010101 $
+0#
+b1111001100101111 !
+b1111110011100110 "
+#32

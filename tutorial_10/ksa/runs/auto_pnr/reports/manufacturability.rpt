@@ -1,0 +1,19 @@
+Design Name: ksa
+Run Directory: /openlane/designs/ksa/runs/auto_pnr
+----------------------------------------
+
+Magic DRC Summary:
+Source: /openlane/designs/ksa/runs/auto_pnr/reports/signoff/drc.rpt
+Total Magic DRC violations is 0
+----------------------------------------
+
+LVS Summary:
+Source: /openlane/designs/ksa/runs/auto_pnr/logs/signoff/38-ksa.lef.lvs.log
+Number of nets: 289                        |Number of nets: 289                        
+Design is LVS clean.
+----------------------------------------
+
+Antenna Summary:
+Source: /openlane/designs/ksa/runs/auto_pnr/logs/signoff/41-arc.log
+Pin violations: 0
+Net violations: 0

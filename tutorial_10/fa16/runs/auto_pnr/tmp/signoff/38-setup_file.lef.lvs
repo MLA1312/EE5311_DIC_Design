@@ -1,0 +1,1 @@
+lvs {/openlane/designs/fa16/runs/auto_pnr/results/signoff/fa16.spice fa16} {/openlane/designs/fa16/runs/auto_pnr/tmp/signoff/35-fa16.pnl.v fa16} /volare/sky130A/libs.tech/netgen/sky130A_setup.tcl /openlane/designs/fa16/runs/auto_pnr/logs/signoff/38-fa16.lef.lvs.log -json

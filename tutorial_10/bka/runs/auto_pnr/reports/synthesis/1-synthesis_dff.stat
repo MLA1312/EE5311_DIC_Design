@@ -1,0 +1,24 @@
+
+55. Printing statistics.
+
+=== bka ===
+
+   Number of wires:                198
+   Number of wire bits:            243
+   Number of public wires:          56
+   Number of public wire bits:     101
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                209
+     $_ANDNOT_                      20
+     $_AND_                          9
+     $_NAND_                         8
+     $_NOR_                         20
+     $_NOT_                          1
+     $_ORNOT_                        5
+     $_OR_                          22
+     $_XNOR_                        18
+     $_XOR_                         56
+     sky130_fd_sc_hd__dfxtp_2       50
+

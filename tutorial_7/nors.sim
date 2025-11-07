@@ -1,0 +1,33 @@
+| units: 500000 tech: sky130A format: MIT
+x Y DGND a_924_288# DGND s=5040,288 d=4200,184 l=30 w=84 x=1154 y=-8 sky130_fd_pr__nfet_01v8
+x A Y DGND DGND s=4200,184 d=5040,288 l=30 w=84 x=-251 y=-8 sky130_fd_pr__nfet_01v8
+x DGND DGND Y DGND s=5040,288 d=4200,184 l=30 w=84 x=228 y=1 sky130_fd_pr__nfet_01v8
+x DGND Y DGND DGND s=4200,184 d=5040,288 l=30 w=84 x=358 y=1 sky130_fd_pr__nfet_01v8
+x DGND DVDD a_834_288# DVDD s=8400,268 d=10080,456 l=30 w=168 x=2154 y=288 sky130_fd_pr__pfet_01v8
+x Y a_834_288# a_924_288# DVDD s=10080,456 d=8400,268 l=30 w=168 x=894 y=288 sky130_fd_pr__pfet_01v8
+x Y a_924_288# DGND DGND s=4200,184 d=5040,288 l=30 w=84 x=1284 y=-8 sky130_fd_pr__nfet_01v8
+x DGND a_834_288# DVDD DVDD s=8400,268 d=8400,268 l=30 w=168 x=2024 y=288 sky130_fd_pr__pfet_01v8
+x A DGND Y DGND s=5040,288 d=4200,184 l=30 w=84 x=-381 y=-8 sky130_fd_pr__nfet_01v8
+x DGND DVDD a_834_288# DVDD s=8400,268 d=8400,268 l=30 w=168 x=1894 y=288 sky130_fd_pr__pfet_01v8
+x Y a_924_288# a_834_288# DVDD s=8400,268 d=10080,456 l=30 w=168 x=1284 y=288 sky130_fd_pr__pfet_01v8
+x DGND a_n702_288# DVDD DVDD s=8400,268 d=8400,268 l=30 w=168 x=488 y=288 sky130_fd_pr__pfet_01v8
+x DGND a_834_288# DVDD DVDD s=10080,456 d=8400,268 l=30 w=168 x=1764 y=288 sky130_fd_pr__pfet_01v8
+x Y a_834_288# a_924_288# DVDD s=8400,268 d=8400,268 l=30 w=168 x=1154 y=288 sky130_fd_pr__pfet_01v8
+x DGND DVDD a_n702_288# DVDD s=8400,268 d=8400,268 l=30 w=168 x=358 y=288 sky130_fd_pr__pfet_01v8
+x DGND DGND a_924_288# DGND s=5040,288 d=4200,184 l=30 w=84 x=1764 y=1 sky130_fd_pr__nfet_01v8
+x A a_n702_288# Y DVDD s=8400,268 d=8400,268 l=30 w=168 x=-381 y=288 sky130_fd_pr__pfet_01v8
+x Y a_924_288# a_834_288# DVDD s=8400,268 d=8400,268 l=30 w=168 x=1024 y=288 sky130_fd_pr__pfet_01v8
+x DGND a_n702_288# DVDD DVDD s=10080,456 d=8400,268 l=30 w=168 x=228 y=288 sky130_fd_pr__pfet_01v8
+x DGND a_924_288# DGND DGND s=4200,184 d=5040,288 l=30 w=84 x=1894 y=1 sky130_fd_pr__nfet_01v8
+x A Y a_n702_288# DVDD s=8400,268 d=10080,456 l=30 w=168 x=-251 y=288 sky130_fd_pr__pfet_01v8
+x DGND DVDD a_n702_288# DVDD s=8400,268 d=10080,456 l=30 w=168 x=618 y=288 sky130_fd_pr__pfet_01v8
+x A a_n702_288# Y DVDD s=10080,456 d=8400,268 l=30 w=168 x=-641 y=288 sky130_fd_pr__pfet_01v8
+x A Y a_n702_288# DVDD s=8400,268 d=8400,268 l=30 w=168 x=-511 y=288 sky130_fd_pr__pfet_01v8
+R Y 6850
+R A 3322
+C DVDD0 4.7
+R DVDD 13590
+R DGND 11954
+R a_924_288# 2890
+R a_834_288# 6121
+R a_n702_288# 6121

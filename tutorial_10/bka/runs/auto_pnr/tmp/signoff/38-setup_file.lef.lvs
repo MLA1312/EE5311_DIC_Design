@@ -1,0 +1,1 @@
+lvs {/openlane/designs/bka/runs/auto_pnr/results/signoff/bka.spice bka} {/openlane/designs/bka/runs/auto_pnr/tmp/signoff/35-bka.pnl.v bka} /volare/sky130A/libs.tech/netgen/sky130A_setup.tcl /openlane/designs/bka/runs/auto_pnr/logs/signoff/38-bka.lef.lvs.log -json

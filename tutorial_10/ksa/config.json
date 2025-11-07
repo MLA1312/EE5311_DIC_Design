@@ -1,0 +1,11 @@
+{
+    "//": "Basics",
+    "DESIGN_NAME": "ksa",
+    "VERILOG_FILES": "dir::src/*.v",
+    "CLOCK_PERIOD": 4.93,
+    "CLOCK_PORT": "CLK",
+    "PNR_SDC_FILE": "dir::src/ksa.sdc",
+    "SIGNOFF_SDC_FILE": "dir::src/ksa.sdc",
+    "//": "Pin Order",
+    "FP_PIN_ORDER_CFG": "dir::pin_order.cfg"
+}

@@ -1,0 +1,6 @@
+<< properties >>
+string FIXED_BBOX 0 0 16640 18784
+string GDS_END 917796
+string GDS_FILE /openlane/designs/ksa/runs/auto_pnr/results/signoff/ksa.magic.gds
+string GDS_START 263622
+<< end >>

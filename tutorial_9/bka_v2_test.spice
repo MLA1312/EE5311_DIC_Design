@@ -1,0 +1,201 @@
+** sch_path: /home/EE23B038/ee5311/tutorial_9/bka_v2_test.sch
+**.subckt bka_v2_test
+* noconn A[15:0]
+* noconn B[15:0]
+* noconn Cin
+* noconn S[15:0]
+* noconn Cout
+x1 A[15] A[14] A[13] A[12] A[11] A[10] A[9] A[8] A[7] A[6] A[5] A[4] A[3] A[2] A[1] A[0] B[15] B[14] B[13] B[12] B[11] B[10] B[9]
++ B[8] B[7] B[6] B[5] B[4] B[3] B[2] B[1] B[0] S[15] S[14] S[13] S[12] S[11] S[10] S[9] S[8] S[7] S[6] S[5] S[4] S[3] S[2] S[1] S[0] Cin
++ Cout bka_v2
+**.ends
+
+* expanding   symbol:  /home/EE23B038/ee5311/tutorial_9/bka_v2.sym # of pins=5
+** sym_path: /home/EE23B038/ee5311/tutorial_9/bka_v2.sym
+** sch_path: /home/EE23B038/ee5311/tutorial_9/bka_v2.sch
+.subckt bka_v2 A[15] A[14] A[13] A[12] A[11] A[10] A[9] A[8] A[7] A[6] A[5] A[4] A[3] A[2] A[1] A[0] B[15] B[14] B[13] B[12] B[11]
++ B[10] B[9] B[8] B[7] B[6] B[5] B[4] B[3] B[2] B[1] B[0] S[15] S[14] S[13] S[12] S[11] S[10] S[9] S[8] S[7] S[6] S[5] S[4] S[3] S[2]
++ S[1] S[0] Cin Cout
+*.ipin Cin
+*.opin Cout
+*.ipin A[15],A[14],A[13],A[12],A[11],A[10],A[9],A[8],A[7],A[6],A[5],A[4],A[3],A[2],A[1],A[0]
+*.ipin B[15],B[14],B[13],B[12],B[11],B[10],B[9],B[8],B[7],B[6],B[5],B[4],B[3],B[2],B[1],B[0]
+*.opin S[15],S[14],S[13],S[12],S[11],S[10],S[9],S[8],S[7],S[6],S[5],S[4],S[3],S[2],S[1],S[0]
+x5 A3 P3 net3 B3 prep
+x6 A2 P2 net4 B2 prep
+x7 A1 P1 net2 B1 prep
+x8 A0 P0 net1 B0 prep
+x17 P0 net1 net2 P1 net8 net7 pro
+x18 P2 net4 net3 P3 net6 net5 pro
+x19 net8 net7 net4 P2 net68 net67 pro
+x20 net8 net7 net5 net6 net18 net17 pro
+x21 net18 net17 net9 P4 net66 net65 pro
+x22 net18 net17 net15 net16 net64 net63 pro
+x23 net16 net15 net12 P6 net62 net61 pro
+x24 net18 net17 net19 net20 net44 net43 pro
+x1 A7 P7 net11 B7 prep
+x2 A6 P6 net12 B6 prep
+x3 A5 P5 net10 B5 prep
+x4 A4 P4 net9 B4 prep
+x25 P4 net9 net10 P5 net16 net15 pro
+x26 P6 net12 net11 P7 net14 net13 pro
+x28 net16 net15 net13 net14 net20 net19 pro
+x9 A11 P11 net23 B11 prep
+x10 A10 P10 net24 B10 prep
+x11 A9 P9 net22 B9 prep
+x12 A8 P8 net21 B8 prep
+x13 P8 net21 net22 P9 net28 net27 pro
+x14 P10 net24 net23 P11 net26 net25 pro
+x16 net28 net27 net25 net26 net38 net37 pro
+x32 net38 net37 net39 net40 net42 net41 pro
+x33 A15 P15 net31 B15 prep
+x34 A14 P14 net32 B14 prep
+x35 A13 P13 net30 B13 prep
+x36 A12 P12 net29 B12 prep
+x37 P12 net29 net30 P13 net36 net35 pro
+x38 P14 net32 net31 P15 net34 net33 pro
+x40 net36 net35 net33 net34 net40 net39 pro
+x41 net44 net43 net41 net42 net46 net45 pro
+x42 net50 net49 net32 P14 net48 net47 pro
+x43 net54 net53 net35 net36 net50 net49 pro
+x44 net54 net53 net29 P12 net52 net51 pro
+x45 net44 net43 net37 net38 net54 net53 pro
+x46 net58 net57 net24 P10 net56 net55 pro
+x47 net44 net43 net27 net28 net58 net57 pro
+x48 net44 net43 net21 P8 net60 net59 pro
+x49 zer Cin net45 net46 net84 Cout pro
+x50 zer Cin net47 net48 net85 net69 pro
+x51 zer Cin net49 net50 net86 net70 pro
+x52 zer Cin net51 net52 net87 net71 pro
+x53 zer Cin net53 net54 net88 net72 pro
+x54 zer Cin net55 net56 net89 net73 pro
+x55 zer Cin net57 net58 net90 net74 pro
+x56 zer Cin net59 net60 net91 net75 pro
+x57 zer Cin net43 net44 net92 net76 pro
+x58 zer Cin net61 net62 net93 net77 pro
+x59 zer Cin net63 net64 net94 net78 pro
+x60 zer Cin net65 net66 net95 net79 pro
+x61 zer Cin net17 net18 net96 net80 pro
+x62 zer Cin net67 net68 net97 net81 pro
+x63 zer Cin net7 net8 net98 net82 pro
+x64 zer Cin net1 P0 net99 net83 pro
+* noconn Cout
+* noconn Cin
+* noconn A[15:0]
+* noconn B[15:0]
+x65 P15 S15 net69 post
+x66 P14 S14 net70 post
+x67 P13 S13 net71 post
+x68 P12 S12 net72 post
+x69 P11 S11 net73 post
+x70 P10 S10 net74 post
+x71 P9 S9 net75 post
+x72 P8 S8 net76 post
+x73 P7 S7 net77 post
+x74 P6 S6 net78 post
+x75 P5 S5 net79 post
+x76 P4 S4 net80 post
+x77 P3 S3 net81 post
+x78 P2 S2 net82 post
+x79 P1 S1 net83 post
+* noconn S[15:0]
+x80 P0 S0 Cin post
+* noconn B15
+* noconn A15
+* noconn B14
+* noconn A14
+* noconn B13
+* noconn A13
+* noconn B12
+* noconn A12
+* noconn B11
+* noconn A11
+* noconn B10
+* noconn A10
+* noconn B9
+* noconn A9
+* noconn B8
+* noconn A8
+* noconn B7
+* noconn A7
+* noconn B6
+* noconn A6
+* noconn B5
+* noconn A5
+* noconn B4
+* noconn A4
+* noconn B3
+* noconn A3
+* noconn B2
+* noconn A2
+* noconn B1
+* noconn A1
+* noconn B0
+* noconn A0
+* noconn S15
+* noconn S14
+* noconn S13
+* noconn S12
+* noconn S11
+* noconn S10
+* noconn S9
+* noconn S8
+* noconn S7
+* noconn S6
+* noconn S5
+* noconn S4
+* noconn S3
+* noconn S2
+* noconn S1
+* noconn S0
+* noconn zer
+.ends
+
+
+* expanding   symbol:  /home/EE23B038/ee5311/tutorial_9/prep.sym # of pins=4
+** sym_path: /home/EE23B038/ee5311/tutorial_9/prep.sym
+** sch_path: /home/EE23B038/ee5311/tutorial_9/prep.sch
+.subckt prep A P G B
+*.ipin A
+*.ipin B
+*.opin P
+*.opin G
+* noconn A
+* noconn P
+* noconn G
+* noconn B
+.ends
+
+
+* expanding   symbol:  /home/EE23B038/ee5311/tutorial_9/pro.sym # of pins=6
+** sym_path: /home/EE23B038/ee5311/tutorial_9/pro.sym
+** sch_path: /home/EE23B038/ee5311/tutorial_9/pro.sch
+.subckt pro P1 G1 G2 P2 P G
+*.ipin P1
+*.ipin P2
+*.ipin G1
+*.ipin G2
+*.opin G
+*.opin P
+* noconn G2
+* noconn P1
+* noconn P2
+* noconn G1
+* noconn G
+* noconn P
+.ends
+
+
+* expanding   symbol:  /home/EE23B038/ee5311/tutorial_9/post.sym # of pins=3
+** sym_path: /home/EE23B038/ee5311/tutorial_9/post.sym
+** sch_path: /home/EE23B038/ee5311/tutorial_9/post.sch
+.subckt post Pi Si Ci
+*.ipin Pi
+*.ipin Ci
+*.opin Si
+* noconn Pi
+* noconn Ci
+* noconn Si
+.ends
+
+.end

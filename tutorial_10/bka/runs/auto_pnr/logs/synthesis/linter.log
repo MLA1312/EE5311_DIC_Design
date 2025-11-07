@@ -1,0 +1,66 @@
+%Warning-UNUSEDSIGNAL: /openlane/designs/bka/src/bka.v:86:6: Signal is not used: 'net84'
+                                                           : ... note: In instance 'bka'
+   86 | wire net84 ;
+      |      ^~~~~
+                       ... For warning description see https://verilator.org/warn/UNUSEDSIGNAL?v=5.018
+                       ... Use "/* verilator lint_off UNUSEDSIGNAL */" and lint_on around source to disable this message.
+%Warning-UNUSEDSIGNAL: /openlane/designs/bka/src/bka.v:87:6: Signal is not used: 'net85'
+                                                           : ... note: In instance 'bka'
+   87 | wire net85 ;
+      |      ^~~~~
+%Warning-UNUSEDSIGNAL: /openlane/designs/bka/src/bka.v:88:6: Signal is not used: 'net86'
+                                                           : ... note: In instance 'bka'
+   88 | wire net86 ;
+      |      ^~~~~
+%Warning-UNUSEDSIGNAL: /openlane/designs/bka/src/bka.v:89:6: Signal is not used: 'net87'
+                                                           : ... note: In instance 'bka'
+   89 | wire net87 ;
+      |      ^~~~~
+%Warning-UNUSEDSIGNAL: /openlane/designs/bka/src/bka.v:90:6: Signal is not used: 'net88'
+                                                           : ... note: In instance 'bka'
+   90 | wire net88 ;
+      |      ^~~~~
+%Warning-UNUSEDSIGNAL: /openlane/designs/bka/src/bka.v:91:6: Signal is not used: 'net89'
+                                                           : ... note: In instance 'bka'
+   91 | wire net89 ;
+      |      ^~~~~
+%Warning-UNUSEDSIGNAL: /openlane/designs/bka/src/bka.v:92:6: Signal is not used: 'net90'
+                                                           : ... note: In instance 'bka'
+   92 | wire net90 ;
+      |      ^~~~~
+%Warning-UNUSEDSIGNAL: /openlane/designs/bka/src/bka.v:93:6: Signal is not used: 'net91'
+                                                           : ... note: In instance 'bka'
+   93 | wire net91 ;
+      |      ^~~~~
+%Warning-UNUSEDSIGNAL: /openlane/designs/bka/src/bka.v:94:6: Signal is not used: 'net92'
+                                                           : ... note: In instance 'bka'
+   94 | wire net92 ;
+      |      ^~~~~
+%Warning-UNUSEDSIGNAL: /openlane/designs/bka/src/bka.v:95:6: Signal is not used: 'net93'
+                                                           : ... note: In instance 'bka'
+   95 | wire net93 ;
+      |      ^~~~~
+%Warning-UNUSEDSIGNAL: /openlane/designs/bka/src/bka.v:96:6: Signal is not used: 'net94'
+                                                           : ... note: In instance 'bka'
+   96 | wire net94 ;
+      |      ^~~~~
+%Warning-UNUSEDSIGNAL: /openlane/designs/bka/src/bka.v:97:6: Signal is not used: 'net95'
+                                                           : ... note: In instance 'bka'
+   97 | wire net95 ;
+      |      ^~~~~
+%Warning-UNUSEDSIGNAL: /openlane/designs/bka/src/bka.v:98:6: Signal is not used: 'net96'
+                                                           : ... note: In instance 'bka'
+   98 | wire net96 ;
+      |      ^~~~~
+%Warning-UNUSEDSIGNAL: /openlane/designs/bka/src/bka.v:99:6: Signal is not used: 'net97'
+                                                           : ... note: In instance 'bka'
+   99 | wire net97 ;
+      |      ^~~~~
+%Warning-UNUSEDSIGNAL: /openlane/designs/bka/src/bka.v:100:6: Signal is not used: 'net98'
+                                                            : ... note: In instance 'bka'
+  100 | wire net98 ;
+      |      ^~~~~
+%Warning-UNUSEDSIGNAL: /openlane/designs/bka/src/bka.v:101:6: Signal is not used: 'net99'
+                                                            : ... note: In instance 'bka'
+  101 | wire net99 ;
+      |      ^~~~~
